@@ -116,17 +116,17 @@
             android:orientation="vertical"
             android:layout_marginTop="8dp">
 
-            <!-- ✅ 蓝莓商品卡片（加了id，可点击跳转） -->
+            <!-- ✅ 蓝莓 -->
             <LinearLayout
                 android:id="@+id/card_blueberry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="?attr/selectableItemBackground"
-                android:padding="8dp">
+                android:layout_marginBottom="8dp">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -143,11 +143,16 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
-            <!-- 🥚 鸡蛋商品（没加点击） -->
+            <!-- ✅ 鸡蛋 -->
             <LinearLayout
+                android:id="@+id/card_egg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
                 android:layout_marginBottom="8dp">
 
                 <ImageView
@@ -165,6 +170,144 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
+            <!-- ✅ 有机鸡肉 -->
+            <LinearLayout
+                android:id="@+id/card_chicken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/chicken"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Organic Chicken - $9.99"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"/>
+            </LinearLayout>
+
+            <!-- ✅ 奶酪 -->
+            <LinearLayout
+                android:id="@+id/card_cheese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/cheese"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farm Cheese - $6.49"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"/>
+            </LinearLayout>
+
+            <!-- ✅ 葡萄 -->
+            <LinearLayout
+                android:id="@+id/card_grape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grape"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Organic Grapes - $4.29"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"/>
+            </LinearLayout>
+
+            <!-- ✅ 南瓜 -->
+            <LinearLayout
+                android:id="@+id/card_pumpkin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/pumpkin"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local Pumpkin - $3.79"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2937"/>
+            </LinearLayout>
         </LinearLayout>
+
+        <!-- ✅ Today’s Menu 区域 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today's Menu"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/today_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:background="#FFF4E5"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="#FFEBC1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click to view recipes made with today's freshest ingredients!"
+                android:textSize="16sp"
+                android:textColor="#7C3A00"/>
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
