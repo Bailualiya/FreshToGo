@@ -45,8 +45,7 @@
             android:padding="12dp"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginTop="16dp"
-            android:radius="12dp">
+            android:layout_marginTop="16dp">
 
             <ImageView
                 android:layout_width="20dp"
@@ -117,11 +116,17 @@
             android:orientation="vertical"
             android:layout_marginTop="8dp">
 
+            <!-- ✅ 蓝莓商品卡片（加了id，可点击跳转） -->
             <LinearLayout
+                android:id="@+id/card_blueberry"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -138,6 +143,7 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
+            <!-- 🥚 鸡蛋商品（没加点击） -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
