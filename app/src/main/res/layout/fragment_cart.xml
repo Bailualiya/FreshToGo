@@ -6,7 +6,7 @@
     android:background="#F8FAFC"
     android:paddingTop="16dp">
 
-    <!-- 标题 -->
+    <!-- 🛒 标题 -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,15 +16,16 @@
         android:padding="16dp"
         android:textColor="#1F2937" />
 
-    <!-- 购物车列表 -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cartRecyclerView"
+    <!-- 🧺 购物项容器 -->
+    <LinearLayout
+        android:id="@+id/cart_item_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingHorizontal="16dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp" />
 
-    <!-- 送货地址 -->
+    <!-- 📦 送货地址 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,7 +48,7 @@
             android:layout_marginStart="8dp" />
     </LinearLayout>
 
-    <!-- 价格计算 -->
+    <!-- 💰 价格显示 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,16 +56,17 @@
         android:background="#FFFFFF"
         android:padding="16dp">
 
+        <!-- 小计 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"
-            >
+            android:gravity="center_vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Subtotal"
                 android:textSize="14sp"
                 android:textColor="#64748B" />
@@ -79,16 +81,18 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <!-- 配送费 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal"
+            android:gravity="center_vertical"
             android:layout_marginTop="8dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Delivery Fee"
                 android:textSize="14sp"
                 android:textColor="#64748B" />
@@ -103,28 +107,31 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <!-- 分割线 -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="#E2E8F0"
             android:layout_marginVertical="8dp" />
 
+        <!-- 总价 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
+            android:gravity="center_vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:text="Total"
                 android:textSize="16sp"
                 android:textColor="#1F2937"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/totalText"
+                android:id="@+id/total_price_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$0.00"
@@ -134,7 +141,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <!-- 结账按钮 -->
+    <!-- ✅ 结账按钮 -->
     <Button
         android:id="@+id/checkoutButton"
         android:layout_width="match_parent"
