@@ -57,11 +57,17 @@ public class ProductDetailFragment extends Fragment {
             textQuantity.setText(String.valueOf(quantity));
         });
 
-        buttonAddToCart.setOnClickListener(v -> {
-            Toast.makeText(getContext(),
-                    quantity + " item(s) added to cart!",
-                    Toast.LENGTH_SHORT).show();
+        Button addToCartButton = view.findViewById(R.id.button_add_to_cart);
+        addToCartButton.setOnClickListener(v -> {
+            String name = getArguments().getString("name");
+            String price = getArguments().getString("price");
+
+            // 示例逻辑：你也可以加购物车数组、写数据库等
+            Toast.makeText(getContext(), name + " added to cart!", Toast.LENGTH_SHORT).show();
+
+            // TODO: 你可以把它加入购物车列表或保存到 SharedPreferences
         });
+
 
         return view;
     }
