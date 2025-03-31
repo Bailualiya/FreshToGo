@@ -62,5 +62,16 @@ public class HomeFragment extends Fragment {
                     .addToBackStack(null)
                     .commit();
         });
+
+        LinearLayout todaysMenuSection = view.findViewById(R.id.todays_menu_section);
+        todaysMenuSection.setOnClickListener(v -> {
+            Fragment recipeFragment = new RecipeFragment();
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, recipeFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
     }
 }

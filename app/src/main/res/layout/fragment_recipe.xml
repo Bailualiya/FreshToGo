@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCF5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🍽️ Today's Recipes"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#4B5563"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Recipe 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp"
+            android:backgroundTint="#F8F4E1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎃 Creamy Pumpkin Soup"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#9A3412" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Made with fresh local pumpkin, onion, cream, and a touch of nutmeg. Perfect for cozy evenings."
+                android:textColor="#7C3A00"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- Recipe 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFEFFB"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp"
+            android:backgroundTint="#FFF0F7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🫐 Blueberry Pancakes"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#6B21A8" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fluffy pancakes with organic blueberries from Sunshine Berry Farm. Sweet, juicy and delicious!"
+                android:textColor="#581C87"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+        <!-- Recipe 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E6F9F2"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp"
+            android:elevation="2dp"
+            android:backgroundTint="#F0FBF7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🧀 Farmhouse Omelette"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#065F46" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free-range eggs, creamy cheese, a hint of herbs. A protein-packed breakfast you'll love."
+                android:textColor="#064E3B"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

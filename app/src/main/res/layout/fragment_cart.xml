@@ -27,11 +27,14 @@
 
     <!-- 📦 送货地址 -->
     <LinearLayout
+        android:id="@+id/delivery_address_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#FFFFFF"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true">
 
         <ImageView
             android:layout_width="20dp"
@@ -40,9 +43,10 @@
             android:tint="#22C55E" />
 
         <TextView
+            android:id="@+id/delivery_address_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delivery to: 123 Main St, San Francisco"
+            android:text="Delivery to: 1423 Rd Gernard, Kelowna.BC"
             android:textSize="14sp"
             android:textColor="#1F2937"
             android:layout_marginStart="8dp" />
