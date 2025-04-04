@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F8FAFC">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:id="@+id/back"
+        android:backgroundTint="#22C55E"
+        android:textColor="#FFFFFF"
+        android:text="@string/back"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="140dp"
+        android:background="@drawable/photo" />
+    <EditText
+        android:id="@+id/textArea_information"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints="reviews here"
+        android:background="@drawable/review_background"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:hint="@string/write_your_review_here"
+        android:lines="20"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:scrollHorizontally="false" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/anonymous" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="#22C55E"
+            android:textColor="#FFFFFF"
+            android:text="@string/publish"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
