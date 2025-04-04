@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">FreshToGo</string>
+    <string name="back">Back</string>
+    <string name="farm_info">Farm Info</string>
+    <string name="photo">Photo</string>
+    <string name="farm_name">Farm Name</string>
+    <string name="add_a_review">Add a review</string>
+    <string name="recent_most_liked">Recent / Most Liked</string>
+    <string name="write_your_review_here">Write your review here...</string>
+    <string name="publish">Publish</string>
+    <string name="anonymous">Anonymous</string>
 </resources>
