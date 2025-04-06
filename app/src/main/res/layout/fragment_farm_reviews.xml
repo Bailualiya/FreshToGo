@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F8FAFC">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:id="@+id/back"
+        android:backgroundTint="#22C55E"
+        android:textColor="#FFFFFF"
+        android:text="@string/back"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recent_most_liked"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="600dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/reviews"
+            android:showDividers="middle|beginning|end"
+            android:divider="@drawable/divider"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical" />
+    </ScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:id="@+id/new_review"
+       android:orientation="vertical"
+       android:text="@string/add_a_review"
+       android:backgroundTint="#22C55E"
+       android:textColor="#FFFFFF"
+       />
+    </RelativeLayout>
+</LinearLayout>

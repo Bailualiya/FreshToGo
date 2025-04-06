@@ -2,12 +2,17 @@ package com.example.freshtogo;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.LinearLayout;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +38,8 @@ public class SavedFragment extends Fragment {
 
     private void loadSavedFarms() {
         List<Farm> farms = new ArrayList<>();
-        farms.add(new Farm("Berry Hills Farm", "Organic berries and fruits", "2.5 miles away", R.drawable.ic_farm1));
-        farms.add(new Farm("Happy Hens Farm", "Free-range eggs and poultry", "3.2 miles away", R.drawable.ic_farm2));
+        farms.add(new Farm("Berry Hills Farm", "Organic berries and fruits", "2.5 miles away", R.drawable.ic_farm1, "5923 Old Vernon Rd", "847-656-8909"));
+        farms.add(new Farm("Happy Hens Farm", "Free-range eggs and poultry", "3.2 miles away", R.drawable.ic_farm2, "1745 Victoria Ave", "650-432-5548"));
 
         for (Farm farm : farms) {
             View itemView = getLayoutInflater().inflate(R.layout.item_saved_farm, savedList, false);
@@ -49,24 +54,44 @@ public class SavedFragment extends Fragment {
             farmDistance.setText(farm.getDistance());
             farmImage.setImageResource(farm.getImageRes());
 
+            itemView.setOnClickListener(v -> {
+                FarmFragment fragment = new FarmFragment();
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("farm", farm);
+                fragment.setArguments(bundle);
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.addToBackStack(null);
+                transaction.replace(R.id.fragment_container, fragment).commit();
+            });
+
             savedList.addView(itemView);
         }
     }
 
-    static class Farm {
-        private String name, description, distance;
+    static class Farm implements Serializable {
+        private String name, description, distance, location, contact;
         private int imageRes;
 
-        public Farm(String name, String description, String distance, int imageRes) {
+        public Farm(String name, String description, String distance, int imageRes, String location, String contact) {
             this.name = name;
             this.description = description;
             this.distance = distance;
             this.imageRes = imageRes;
+            this.location = location;
+            this.contact = contact;
         }
 
         public String getName() { return name; }
         public String getDescription() { return description; }
         public String getDistance() { return distance; }
         public int getImageRes() { return imageRes; }
+
+        public String getContact() {
+            return contact;
+        }
+
+        public String getLocation() {
+            return location;
+        }
     }
 }
