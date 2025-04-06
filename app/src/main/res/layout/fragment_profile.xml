@@ -1,45 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp"
-    android:background="@android:color/white">
+    android:padding="24dp"
+    android:background="#F8FAFC">
 
-    <TextView
-        android:id="@+id/user_name"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="John Doe"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        android:layout_marginBottom="16dp"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/user_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="john.doe@example.com"
-        android:textSize="14sp"
-        android:textColor="#777777"
-        android:layout_marginBottom="16dp"/>
+        <!-- Username -->
+        <TextView
+            android:id="@+id/profileUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, User"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:paddingBottom="24dp" />
 
-    <ImageView
-        android:id="@+id/settings_icon"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@android:drawable/ic_menu_preferences"
-        android:layout_marginBottom="16dp"/>
+        <!-- Order History Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order History"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="#1F2937" />
 
-    <Button
-        android:id="@+id/logout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log Out"
-        android:padding="12dp"
-        android:backgroundTint="#FEE2E2"
-        android:textColor="#EF4444"/>
-</LinearLayout>
+        <!-- Order History List -->
+        <TextView
+            android:id="@+id/profileOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No orders yet."
+            android:textSize="15sp"
+            android:textColor="#334155"
+            android:paddingBottom="16dp" />
+
+        <!-- Saved Cards Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Cards"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="#1F2937" />
+
+        <!-- Saved Cards List -->
+        <TextView
+            android:id="@+id/profileCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No saved cards."
+            android:textSize="15sp"
+            android:textColor="#334155"
+            android:paddingBottom="24dp" />
+
+        <!-- Logout -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#EF4444"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

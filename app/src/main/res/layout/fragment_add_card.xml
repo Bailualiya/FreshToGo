@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8FAFC">
+
+    <EditText
+        android:id="@+id/card_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Card Number"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/card_holder_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Card Holder Name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/security_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Security Code"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/expiry_date_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Expiry Date (MM/YY)"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/bank_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bank Name"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/save_card_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Card"
+        android:backgroundTint="#22C55E"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

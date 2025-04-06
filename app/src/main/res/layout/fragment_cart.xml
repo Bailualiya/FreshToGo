@@ -16,40 +16,47 @@
         android:padding="16dp"
         android:textColor="#1F2937" />
 
-    <!-- 🧺 购物项容器 -->
+    <!-- 🧺 购物项容器 (ScrollView for scrolling cart items) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"> <!-- Allow ScrollView to take the remaining space -->
+
+        <LinearLayout
+            android:id="@+id/cart_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="16dp" />
+    </ScrollView>
+
+    <!-- 💬 地址输入框 -->
     <LinearLayout
-        android:id="@+id/cart_item_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingBottom="16dp" />
-
-    <!-- 📦 送货地址 -->
-    <LinearLayout
-        android:id="@+id/delivery_address_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:background="#FFFFFF"
         android:padding="16dp"
-        android:clickable="true"
-        android:focusable="true">
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_location"
-            android:tint="#22C55E" />
+        android:layout_marginTop="16dp">
 
         <TextView
-            android:id="@+id/delivery_address_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delivery to: 1423 Rd Gernard, Kelowna.BC"
+            android:text="Enter your delivery address:"
+            android:textSize="14sp"
+            android:textColor="#1F2937" />
+
+        <EditText
+            android:id="@+id/address_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter address here"
             android:textSize="14sp"
             android:textColor="#1F2937"
-            android:layout_marginStart="8dp" />
+            android:background="@drawable/edit_text_border"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"/>
     </LinearLayout>
 
     <!-- 💰 价格显示 -->

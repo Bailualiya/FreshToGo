@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- 头部区域 -->
+        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 android:tint="#1F2937"/>
         </LinearLayout>
 
-        <!-- 搜索框 -->
+        <!-- Search Bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,111 +64,7 @@
                 android:background="@null"/>
         </LinearLayout>
 
-        <!-- 分类标题 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Categories"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#1F2937"
-            android:layout_marginTop="16dp"/>
-
-        <!-- 分类区域（圆形图标 + 文字） -->
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:overScrollMode="never"
-            android:scrollbars="none">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <!-- 🍓 Fruits -->
-                <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_marginEnd="16dp">
-
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/strawberry"
-                        android:background="@drawable/circle_background"
-                        android:padding="12dp"
-                        android:scaleType="centerInside"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Fruits"
-                        android:textSize="14sp"
-                        android:textColor="#1F2937"
-                        android:gravity="center"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <!-- 🧀 Dairy -->
-                <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_marginEnd="16dp">
-
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/cheese"
-                        android:background="@drawable/circle_background"
-                        android:padding="12dp"
-                        android:scaleType="centerInside"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Dairy"
-                        android:textSize="14sp"
-                        android:textColor="#1F2937"
-                        android:gravity="center"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <!-- 🥦 Greens -->
-                <LinearLayout
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:src="@drawable/celery"
-                        android:background="@drawable/circle_background"
-                        android:padding="12dp"
-                        android:scaleType="centerInside"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Greens"
-                        android:textSize="14sp"
-                        android:textColor="#1F2937"
-                        android:gravity="center"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <!-- Today's Menu -->
-        <!-- ✅ 点击跳转用的包裹容器 -->
+        <!-- Today's Menu Section -->
         <LinearLayout
             android:id="@+id/todays_menu_section"
             android:layout_width="match_parent"
@@ -178,7 +74,6 @@
             android:padding="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:layout_marginHorizontal="0dp"
             android:clickable="true"
             android:focusable="true"
             android:backgroundTint="#FDF7DF"
@@ -201,28 +96,13 @@
                 android:layout_marginTop="4dp" />
         </LinearLayout>
 
-
-
-
-
-        <!-- 产品标题 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Featured Products"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#1F2937"
-            android:layout_marginTop="16dp"/>
-
-        <!-- 产品区域 -->
+        <!-- Product Cards -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="8dp">
 
-            <!-- 蓝莓 -->
             <LinearLayout
                 android:id="@+id/card_blueberry"
                 android:layout_width="match_parent"
@@ -233,13 +113,11 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_marginBottom="8dp">
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/blueberry"
                     android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -249,7 +127,6 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
-            <!-- 鸡蛋 -->
             <LinearLayout
                 android:id="@+id/card_egg"
                 android:layout_width="match_parent"
@@ -260,13 +137,11 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_marginBottom="8dp">
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/egg"
                     android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -276,7 +151,6 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
-            <!-- 有机鸡肉 -->
             <LinearLayout
                 android:id="@+id/card_chicken"
                 android:layout_width="match_parent"
@@ -287,13 +161,11 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_marginBottom="8dp">
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/chicken"
                     android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -303,7 +175,6 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
-            <!-- 奶酪 -->
             <LinearLayout
                 android:id="@+id/card_cheese"
                 android:layout_width="match_parent"
@@ -314,13 +185,11 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_marginBottom="8dp">
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/cheese"
                     android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -330,7 +199,6 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
-            <!-- 葡萄 -->
             <LinearLayout
                 android:id="@+id/card_grape"
                 android:layout_width="match_parent"
@@ -341,13 +209,11 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_marginBottom="8dp">
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/grape"
                     android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -357,7 +223,6 @@
                     android:textColor="#1F2937"/>
             </LinearLayout>
 
-            <!-- 南瓜 -->
             <LinearLayout
                 android:id="@+id/card_pumpkin"
                 android:layout_width="match_parent"
@@ -368,13 +233,11 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_marginBottom="8dp">
-
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/pumpkin"
                     android:layout_marginEnd="8dp"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -383,6 +246,7 @@
                     android:textStyle="bold"
                     android:textColor="#1F2937"/>
             </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
