@@ -8,11 +8,10 @@
     android:background="#F8FAFC">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="100dp"
         android:id="@+id/back"
-        android:backgroundTint="#22C55E"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/back"
         android:textColor="#FFFFFF"
         android:text="@string/back"/>
     <LinearLayout

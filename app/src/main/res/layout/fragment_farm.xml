@@ -10,11 +10,10 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:width="100dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:id="@+id/back"
-            android:backgroundTint="#22C55E"
+            android:background="@drawable/back"
             android:textColor="#FFFFFF"
             android:text="@string/back"/>
         <LinearLayout
@@ -76,22 +75,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/location"
-            android:text="Location" />
+            android:text="@string/location" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/contact"
-            android:text="Contact" />
+            android:text="@string/contact" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/description"
-            android:text="Description"/>
+            android:text="@string/description"/>
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
         <Button
             android:layout_width="150dp"
@@ -99,13 +98,18 @@
             android:id="@+id/reviews"
             android:backgroundTint="#22C55E"
             android:textColor="#FFFFFF"
-            android:text="Reviews"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="80dp"
+            android:text="@string/reviews"/>
         <Button
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/buy"
             android:backgroundTint="#22C55E"
             android:textColor="#FFFFFF"
-            android:text="Buy from Farm"/>
-    </LinearLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:text="@string/buy_from_farm"/>
+    </RelativeLayout>
 </LinearLayout>
