@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Add New Card"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/cardholder_name_input"
+            android:hint="Cardholder Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/card_number_input"
+            android:hint="Card Number (16 digits)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="16"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/expiry_date_input"
+            android:hint="Expiry Date (MM/YY)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLength="5"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/cvv_input"
+            android:hint="Security Code (CVV)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/save_card_button"
+            android:text="Save Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#22C55E"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

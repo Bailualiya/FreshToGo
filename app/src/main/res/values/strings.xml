@@ -9,4 +9,9 @@
     <string name="write_your_review_here">Write your review here...</string>
     <string name="publish">Publish</string>
     <string name="anonymous">Anonymous</string>
+    <string name="reviews">Reviews</string>
+    <string name="buy_from_farm">Buy from Farm</string>
+    <string name="description">Description</string>
+    <string name="contact">Contact</string>
+    <string name="location">Location</string>
 </resources>
