@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -62,13 +63,18 @@ public class CartFragment extends Fragment {
         });
         View checkoutButton = view.findViewById(R.id.checkoutButton);
         checkoutButton.setOnClickListener(v -> {
-            CheckoutFragment checkoutFragment = new CheckoutFragment();
-            requireActivity().getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, checkoutFragment)
-                    .addToBackStack(null)
-                    .commit();
+            if (CartManager.getCartItems().isEmpty()) {
+                Toast.makeText(getContext(), "Cart is empty!", Toast.LENGTH_SHORT).show();
+            } else {
+                CheckoutFragment checkoutFragment = new CheckoutFragment();
+                requireActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, checkoutFragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
         });
+
 
         return view;
 
