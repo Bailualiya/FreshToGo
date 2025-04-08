@@ -7,7 +7,7 @@ public class Card {
     }
 
     private final String cardholderName;
-    private final String cardNumber; // For PayPal: email, for Gift Card: code
+    private final String cardNumber;
     private final String expiryDate;
     private final String cvv;
     private final Type type;
@@ -32,7 +32,7 @@ public class Card {
         if (cardNumber.length() >= 4) {
             return "•••• " + cardNumber.substring(cardNumber.length() - 4);
         } else {
-            return cardNumber; // PayPal email or gift code
+            return cardNumber;
         }
     }
 

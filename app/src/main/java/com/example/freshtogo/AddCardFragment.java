@@ -54,7 +54,6 @@ public class AddCardFragment extends Fragment {
                 return;
             }
 
-            // Determine card type based on first digit
             Card.Type type;
             if (number.startsWith("4")) type = Card.Type.VISA;
             else if (number.startsWith("5")) type = Card.Type.MASTERCARD;
