@@ -60,7 +60,17 @@ public class CartFragment extends Fragment {
                 addressText.setText("Delivery to: " + newAddress);
             }
         });
+        View checkoutButton = view.findViewById(R.id.checkoutButton);
+        checkoutButton.setOnClickListener(v -> {
+            CheckoutFragment checkoutFragment = new CheckoutFragment();
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, checkoutFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
 
         return view;
+
     }
 }
