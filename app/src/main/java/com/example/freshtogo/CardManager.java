@@ -5,20 +5,25 @@ import java.util.List;
 
 public class CardManager {
 
-    private static final List<String> savedCards = new ArrayList<>();
+    private static final List<Card> savedCards = new ArrayList<>();
 
     static {
-
-        savedCards.add("Visa - **** 1234");
-        savedCards.add("MasterCard - **** 5678");
-        savedCards.add("Amex - **** 9876");
+        // Preload with a few example cards
+        savedCards.add(new Card("John Doe", "4111111111111234", "12/26", "123", Card.Type.VISA));
+        savedCards.add(new Card("Jane Smith", "5500000000005678", "11/25", "456", Card.Type.MASTERCARD));
+        savedCards.add(new Card("paypal@example.com", "paypal@example.com", "", "", Card.Type.PAYPAL));
+        savedCards.add(new Card("FreshToGo Gift", "FreshToGo123456", "", "", Card.Type.GIFT));
     }
 
-    public static List<String> getSavedCards() {
-        return new ArrayList<>(savedCards);
+    public static List<Card> getSavedCards() {
+        return new ArrayList<>(savedCards); // Return copy
     }
 
-    public static void addCard(String card) {
+    public static void addCard(Card card) {
         savedCards.add(card);
+    }
+
+    public static void clearCards() {
+        savedCards.clear();
     }
 }

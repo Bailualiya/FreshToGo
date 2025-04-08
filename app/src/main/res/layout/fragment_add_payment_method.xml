@@ -1,0 +1,119 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#F8FAFC"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:text="Add Payment Method"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1F2937"
+        android:layout_marginBottom="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/credit_card_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/card"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Card Icon" />
+
+        <TextView
+            android:text="Credit or Debit Card"
+            android:textSize="16sp"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/paypal_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/paypal"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="PayPal Icon" />
+
+        <TextView
+            android:text="PayPal"
+            android:textSize="16sp"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/gift_card_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/gift"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="Gift Icon" />
+
+        <TextView
+            android:text="Gift Card"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/back_to_checkout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back to Checkout"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"
+        android:padding="12dp"
+        android:backgroundTint="#E5E7EB"
+        android:textColor="#1F2937" />
+
+</LinearLayout>
