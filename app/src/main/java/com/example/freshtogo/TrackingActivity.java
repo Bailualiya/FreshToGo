@@ -1,12 +1,17 @@
 package com.example.freshtogo;
 
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.PopupMenu;
 import android.widget.Toast;
 
 
@@ -47,6 +52,15 @@ public class TrackingActivity extends AppCompatActivity implements OnMapReadyCal
             mapFragment.getMapAsync(this);
         }
 
+        findViewById(R.id.btnBack).setOnClickListener(v -> {
+            Intent intent = new Intent(TrackingActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            startActivity(intent);
+            finish();
+        });
+        findViewById(R.id.btnMore).setOnClickListener(v -> {
+            showPopupMenu(v);
+        });
         findViewById(R.id.btnChat).setOnClickListener(v -> showChatDialog());
         findViewById(R.id.btnCall).setOnClickListener(v -> showCallDialog());
     }
@@ -79,6 +93,28 @@ public class TrackingActivity extends AppCompatActivity implements OnMapReadyCal
         String str_dest = "destination=" + dest.latitude + "," + dest.longitude;
         String parameters = str_origin + "&" + str_dest + "&sensor=false&mode=driving";
         return "https://maps.googleapis.com/maps/api/directions/json?" + parameters + "&key=AIzaSyCS-q-foUIZ_Pdhmlq0oz01vrmbKLDQLvU";
+    }
+
+    private void showPopupMenu(View anchor) {
+        PopupMenu popup = new PopupMenu(this, anchor);
+        popup.getMenuInflater().inflate(R.menu.menu_tracking, popup.getMenu());
+
+        popup.setOnMenuItemClickListener(item -> {
+            if (item.getItemId() == R.id.menu_share) {
+                shareDeliveryInfo();
+                return true;
+            }
+            return false;
+        });
+
+        popup.show();
+    }
+
+    private void shareDeliveryInfo() {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "Track my delivery with FreshToGo!");
+        startActivity(Intent.createChooser(shareIntent, "Share via"));
     }
 
     private void animateCourierAlongRoute(List<LatLng> points) {
@@ -118,14 +154,6 @@ public class TrackingActivity extends AppCompatActivity implements OnMapReadyCal
         remainingLine = mMap.addPolyline(options);
     }
 
-    private void showCallDialog() {
-        new androidx.appcompat.app.AlertDialog.Builder(this)
-                .setTitle("Call Your Courier")
-                .setMessage("Calling...")
-                .setPositiveButton("Close", null)
-                .show();
-    }
-
     private void showChatDialog() {
         final EditText input = new EditText(this);
         input.setHint("Enter your message...");
@@ -143,6 +171,19 @@ public class TrackingActivity extends AppCompatActivity implements OnMapReadyCal
                 .show();
     }
 
+    private void showCallDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Call Your Courier")
+                .setMessage("Do you want to call the courier at 123-456-7890?")
+                .setPositiveButton("Call", (dialog, which) -> {
+                    String phoneNumber = "tel:1234567890";
+                    Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+                    dialIntent.setData(Uri.parse(phoneNumber));
+                    startActivity(dialIntent);
+                })
+                .setNegativeButton("Cancel", null)
+                .show();
+    }
 
 
     private BitmapDescriptor resizeIcon(int drawableResId, int width, int height) {

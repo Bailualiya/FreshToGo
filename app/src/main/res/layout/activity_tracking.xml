@@ -8,7 +8,50 @@
     android:layout_height="match_parent"
     tools:context=".TrackingActivity">
 
-    <!-- Google Map -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="6dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_circle_white"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"
+            android:scaleType="centerInside"
+            android:elevation="6dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btnMore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:background="@drawable/bg_circle_white"
+            android:src="@drawable/ic_more"
+            android:contentDescription="More"
+            android:scaleType="centerInside"
+            android:elevation="6dp" />
+    </LinearLayout>
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -19,7 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Bottom Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/bottomCard"
         android:layout_width="0dp"
@@ -78,7 +120,6 @@
                 android:textStyle="bold"
                 android:paddingBottom="12dp" />
 
-            <!-- Courier Info Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -93,12 +134,11 @@
                 android:shape="rectangle">
 
                 <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="43dp"
+                    android:layout_height="43dp"
                     android:src="@drawable/ic_profile"
                     android:contentDescription="Courier"
                     android:padding="8dp" />
-<!--                android:background="@drawable/circle_bg"-->
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -123,7 +163,6 @@
                         android:textColor="#FFDDDD" />
                 </LinearLayout>
 
-                <!-- Chat and Call Icons -->
                 <ImageView
                     android:id="@+id/btnChat"
                     android:layout_width="32dp"
@@ -136,7 +175,6 @@
                     android:layout_marginEnd="8dp"
                     android:scaleType="centerInside" />
 
-                <!-- Call Icon -->
                 <ImageView
                     android:id="@+id/btnCall"
                     android:layout_width="32dp"
@@ -147,9 +185,6 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:scaleType="centerInside" />
-
-
-
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
