@@ -10,14 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:text="@string/edit_info_title"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#1F2937"
-            android:layout_marginBottom="24dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+
 
         <EditText
             android:id="@+id/edit_cardholder_name_input"

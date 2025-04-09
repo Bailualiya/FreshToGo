@@ -24,7 +24,6 @@ public class ManageCardsFragment extends Fragment {
         LinearLayout containerLayout = view.findViewById(R.id.card_list_container);
 
         TextView title = new TextView(getContext());
-        title.setText("Edit Info for Cards");
         title.setTextSize(20);
         title.setTextColor(getResources().getColor(android.R.color.black));
         title.setPadding(16, 32, 16, 32);
