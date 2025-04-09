@@ -27,8 +27,9 @@ public class AddGiftCardFragment extends Fragment {
         saveButton.setOnClickListener(v -> {
             String code = codeInput.getText().toString().trim();
 
-            if (TextUtils.isEmpty(code) || code.length() < 6) {
-                codeInput.setError("Enter a valid gift card code");
+
+            if (TextUtils.isEmpty(code) || code.length() != 6) {
+                codeInput.setError("Enter a valid 6-digit gift card code");
                 return;
             }
 
@@ -36,8 +37,10 @@ public class AddGiftCardFragment extends Fragment {
             CardManager.addCard(giftCard);
 
             Toast.makeText(getContext(), "Gift Card added!", Toast.LENGTH_SHORT).show();
+
             requireActivity().getSupportFragmentManager().popBackStack();
         });
+
         Button cancelButton = view.findViewById(R.id.cancel_paypal_button);
         cancelButton.setOnClickListener(v -> {
             requireActivity().getSupportFragmentManager().popBackStack();

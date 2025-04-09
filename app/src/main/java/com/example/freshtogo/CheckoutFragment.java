@@ -46,7 +46,7 @@ public class CheckoutFragment extends Fragment {
                 if (card.getType() == Card.Type.PAYPAL || card.getType() == Card.Type.GIFT) {
                     cvvInput.setVisibility(View.GONE);
                 } else {
-                    cvvInput.setVisibility(View.VISIBLE);
+                    cvvInput.setVisibility(View.VISIBLE); // Show CVV for Credit and Debit cards
                 }
             });
         }
@@ -68,6 +68,7 @@ public class CheckoutFragment extends Fragment {
                 return;
             }
 
+            // CVV validation for credit and debit cards
             if (selectedCard.getType() != Card.Type.PAYPAL && selectedCard.getType() != Card.Type.GIFT) {
                 String enteredCVV = cvvInput.getText().toString().trim();
                 if (TextUtils.isEmpty(enteredCVV) || !enteredCVV.equals(selectedCard.getCvv())) {
@@ -77,10 +78,23 @@ public class CheckoutFragment extends Fragment {
             }
 
             Toast.makeText(getContext(), "Payment Successful!", Toast.LENGTH_LONG).show();
-            // Clear cart, go home, etc. (optional)
+
+            // Clear the cart after payment
+            CartManager.clearCart();
+
             requireActivity().getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, new HomeFragment())
+                    .commit();
+        });
+
+        Button manageCardsButton = view.findViewById(R.id.manage_cards_button);
+        manageCardsButton.setOnClickListener(v -> {
+            ManageCardsFragment manageFragment = new ManageCardsFragment();
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, manageFragment)
+                    .addToBackStack(null)
                     .commit();
         });
 

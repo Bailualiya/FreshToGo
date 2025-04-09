@@ -10,9 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <TextView
-            android:text="Select a Payment Method"
+            android:text="@string/select_payment_method"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#1F2937"
@@ -20,16 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-
         <RadioGroup
             android:id="@+id/card_radio_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-
         <EditText
             android:id="@+id/confirm_cvv_input"
-            android:hint="Enter CVV"
+            android:hint="@string/enter_cvv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="numberPassword"
@@ -38,27 +35,36 @@
             android:layout_marginBottom="16dp"
             android:background="@android:drawable/edit_text"
             android:padding="12dp"
-            android:textSize="16sp" />
-
+            android:textSize="16sp"
+            android:autofillHints="password" />
 
         <Button
             android:id="@+id/add_card_button"
-            android:text="Add New Card"
+            android:text="@string/add_new_card"
             android:layout_marginTop="8dp"
             android:backgroundTint="#E0E7FF"
             android:textColor="#1D4ED8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-
         <Button
             android:id="@+id/pay_now_button"
-            android:text="Pay Now"
+            android:text="@string/pay_now"
             android:layout_marginTop="24dp"
             android:backgroundTint="#22C55E"
             android:textColor="@android:color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/manage_cards_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/edit_or_delete_cards"
+            android:textSize="16sp"
+            android:textColor="#1F2937"
+            android:backgroundTint="#E5E7EB" />
 
     </LinearLayout>
 </ScrollView>

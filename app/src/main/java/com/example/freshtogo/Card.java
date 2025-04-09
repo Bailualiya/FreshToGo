@@ -14,6 +14,11 @@ public class Card {
 
     public Card(String cardholderName, String cardNumber, String expiryDate, String cvv, Type type) {
         this.cardholderName = cardholderName;
+
+        if (type == Type.GIFT && (cardNumber == null || !cardNumber.matches("\\d{6}"))) {
+            throw new IllegalArgumentException("Gift Card code must be exactly 6 digits");
+        }
+
         this.cardNumber = cardNumber;
         this.expiryDate = expiryDate;
         this.cvv = cvv;
