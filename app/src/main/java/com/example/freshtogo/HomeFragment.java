@@ -70,7 +70,15 @@ public class HomeFragment extends Fragment {
 
         setupClick(view, R.id.card_pumpkin, "Local Pumpkin", "3.79",
                 "Golden pumpkins perfect for soups or pies.", R.drawable.pumpkin);
-
+        LinearLayout todaysMenuSection = view.findViewById(R.id.todays_menu_section);
+        todaysMenuSection.setOnClickListener(v -> {
+            Fragment recipeFragment = new RecipeFragment();
+            requireActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, recipeFragment)
+                    .addToBackStack(null)
+                    .commit();
+        });
         return view;
     }
 
