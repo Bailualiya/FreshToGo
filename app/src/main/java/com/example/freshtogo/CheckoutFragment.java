@@ -1,5 +1,6 @@
 package com.example.freshtogo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -82,10 +83,9 @@ public class CheckoutFragment extends Fragment {
             // Clear the cart after payment
             CartManager.clearCart();
 
-            requireActivity().getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, new HomeFragment())
-                    .commit();
+            Intent intent = new Intent(getContext(), TrackingActivity.class);
+            startActivity(intent);
+            requireActivity().finish();
         });
 
         Button manageCardsButton = view.findViewById(R.id.manage_cards_button);
