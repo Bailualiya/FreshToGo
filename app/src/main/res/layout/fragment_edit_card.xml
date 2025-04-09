@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8FAFC"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="#F8FAFC">
 
     <LinearLayout
         android:orientation="vertical"
@@ -10,63 +11,72 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="@string/add_credit_card"
+            android:text="@string/edit_info_title"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp"
             android:textColor="#1F2937"
+            android:layout_marginBottom="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/cardholder_name_input"
+            android:id="@+id/edit_cardholder_name_input"
             android:hint="@string/cardholder_name"
-            android:autofillHints="name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="12dp"
+            android:autofillHints="name" />
 
         <EditText
-            android:id="@+id/card_number_input"
-            android:hint="@string/card_number"
-            android:autofillHints="creditCardNumber"
+            android:id="@+id/edit_card_number_input"
+            android:hint="@string/card_number_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:maxLength="16"
-            android:layout_marginBottom="12dp" />
+            android:layout_marginBottom="12dp"
+            android:autofillHints="creditCardNumber" />
 
         <EditText
-            android:id="@+id/expiry_date_input"
-            android:hint="@string/expiry_date"
-            android:autofillHints="creditCardExpirationDate"
-            android:inputType="date"
-            android:maxLength="5"
+            android:id="@+id/edit_expiry_date_input"
+            android:hint="@string/expiry_date_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp" />
+            android:maxLength="5"
+            android:inputType="text"
+            android:layout_marginBottom="12dp"
+            android:autofillHints="creditCardExpirationDate" />
 
         <EditText
-            android:id="@+id/cvv_input"
-            android:hint="@string/cvv"
-            android:autofillHints="creditCardSecurityCode"
+            android:id="@+id/edit_cvv_input"
+            android:hint="@string/cvv_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="4"
             android:inputType="numberPassword"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:autofillHints="creditCardSecurityCode" />
 
         <Button
-            android:id="@+id/save_card_button"
-            android:text="@string/save_card"
+            android:id="@+id/update_card_button"
+            android:text="@string/update_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#22C55E"
             android:textColor="#FFFFFF" />
 
         <Button
-            android:id="@+id/cancel_card_button"
+            android:id="@+id/delete_card_button"
+            android:text="@string/delete_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#EF4444"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/cancel_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/cancel"

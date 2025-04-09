@@ -7,7 +7,6 @@
     android:padding="24dp"
     android:gravity="center_horizontal">
 
-
     <ImageView
         android:layout_width="64dp"
         android:layout_height="64dp"
@@ -15,11 +14,10 @@
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:layout_marginBottom="16dp"
-        android:contentDescription="PayPal Icon" />
-
+        android:contentDescription="@string/paypal_icon_description" />
 
     <TextView
-        android:text="Link PayPal Account"
+        android:text="@string/link_paypal_account"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
@@ -27,36 +25,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-
     <EditText
         android:id="@+id/paypal_email_input"
-        android:hint="PayPal Email"
+        android:hint="@string/paypal_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:layout_marginBottom="24dp"
         android:background="@android:drawable/edit_text"
         android:padding="12dp"
-        android:textSize="16sp" />
-
+        android:textSize="16sp"
+        android:autofillHints="emailAddress" />
 
     <Button
         android:id="@+id/save_paypal_button"
-        android:text="Link PayPal"
+        android:text="@string/link_paypal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#22C55E"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:padding="12dp" />
+
     <Button
         android:id="@+id/cancel_paypal_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:textSize="16sp"
         android:layout_marginTop="12dp"
         android:backgroundTint="#E5E7EB"
         android:textColor="#1F2937" />
-
 </LinearLayout>

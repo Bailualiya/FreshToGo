@@ -1,5 +1,5 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:background="#F8FAFC"
     android:layout_width="match_parent"
@@ -7,14 +7,13 @@
     android:padding="24dp">
 
     <TextView
-        android:text="Add Payment Method"
+        android:text="@string/add_payment_method"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="#1F2937"
         android:layout_marginBottom="24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
 
     <LinearLayout
         android:id="@+id/credit_card_option"
@@ -35,16 +34,15 @@
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="12dp"
             android:background="@android:color/transparent"
-            android:contentDescription="Card Icon" />
+            android:contentDescription="@string/card_icon_description" />
 
         <TextView
-            android:text="Credit or Debit Card"
+            android:text="@string/credit_or_debit_card"
             android:textSize="16sp"
             android:layout_marginStart="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/paypal_option"
@@ -65,16 +63,15 @@
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="12dp"
             android:background="@android:color/transparent"
-            android:contentDescription="PayPal Icon" />
+            android:contentDescription="@string/paypal_icon_description" />
 
         <TextView
-            android:text="PayPal"
+            android:text="@string/paypal"
             android:textSize="16sp"
             android:layout_marginStart="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/gift_card_option"
@@ -94,26 +91,24 @@
             android:adjustViewBounds="true"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="12dp"
-            android:contentDescription="Gift Icon" />
+            android:contentDescription="@string/gift_icon_description" />
 
         <TextView
-            android:text="Gift Card"
+            android:text="@string/gift_card"
             android:textSize="16sp"
             android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-
     <Button
         android:id="@+id/back_to_checkout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back to Checkout"
+        android:text="@string/back_to_checkout"
         android:textSize="16sp"
         android:layout_marginBottom="12dp"
         android:padding="12dp"
         android:backgroundTint="#E5E7EB"
         android:textColor="#1F2937" />
-
 </LinearLayout>
