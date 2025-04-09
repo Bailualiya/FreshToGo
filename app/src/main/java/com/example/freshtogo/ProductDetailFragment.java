@@ -57,20 +57,21 @@ public class ProductDetailFragment extends Fragment {
             textQuantity.setText(String.valueOf(quantity));
         });
 
-        Button addToCartButton = view.findViewById(R.id.button_add_to_cart);
-        addToCartButton.setOnClickListener(v -> {
+        buttonAddToCart.setOnClickListener(v -> {
             String name = getArguments().getString("name");
             String priceStr = getArguments().getString("price");
             int imageResId = getArguments().getInt("imageResId");
 
             double price = Double.parseDouble(priceStr);
 
-            CartItem item = new CartItem(name, price, imageResId);
+            int quantity = Integer.parseInt(textQuantity.getText().toString());
+
+            // Add item to the cart with the selected quantity
+            CartItem item = new CartItem(name, price, imageResId, quantity);
             CartManager.addItem(item);
 
-            Toast.makeText(getContext(), name + " added to cart!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), name + " added to cart with quantity: " + quantity, Toast.LENGTH_SHORT).show();
         });
-
 
 
         return view;

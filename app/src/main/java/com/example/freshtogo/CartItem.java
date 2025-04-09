@@ -1,14 +1,16 @@
 package com.example.freshtogo;
-
 public class CartItem {
     private String name;
     private double price;
     private int imageResId;
+    private int quantity;
 
-    public CartItem(String name, double price, int imageResId) {
+
+    public CartItem(String name, double price, int imageResId, int quantity) {
         this.name = name;
         this.price = price;
         this.imageResId = imageResId;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -21,5 +23,17 @@ public class CartItem {
 
     public int getImageResId() {
         return imageResId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double getTotalPrice() {
+        return price * quantity;
     }
 }
